@@ -4,15 +4,15 @@ This is my version of the [pretty-atom-feed.js](https://github.com/11ty/eleventy
 
 It adds an RSS icon and formats the `help` section and recent posts differently.
 
-Note: I use a customized `atom.njk` to create my RSS feed. That's not necessary for this implementation.
-
 ## Implementation
 
 1. Put the `pretty-atom-feed.js` in the same folder that will house your `feed.xml`. (You may be replacing an existing file depending on your starting point.)
 
 2. Make sure to passthrough the file
 	```
+	…
 	eleventyConfig.addPassthroughCopy("./content/feed/pretty-atom-feed.js");
+	…
 	```
 
 3. Add the `script` line to the `export` section of your `eleventy.config.js`. Example:
@@ -22,9 +22,29 @@ Note: I use a customized `atom.njk` to create my RSS feed. That's not necessary 
 			type: "atom", // or "rss", "json"
 			outputPath: "/feed/feed.xml",
 			script: "pretty-atom-feed.js",
+			…
 	```
 
 4. Update the CSS variables to your preferred colors.
+
+### Note
+In my own implementation, I use a customized `atom.njk` to create the feed xml, so my set-up looks like this:
+- `eleventy.config.js` has this line:
+	```
+	…
+	eleventyConfig.addPlugin(pluginRss);
+	…
+	```
+	
+- `/feed/feed.11tydata.js` references the `pretty-atom-feed.js`:
+	```
+	export default {
+	outputPath: "/feed/atom.xml",
+	script: "pretty-atom-feed.js",
+	…
+	```
+
+
 
 ---
 
@@ -32,4 +52,7 @@ Note: I use a customized `atom.njk` to create my RSS feed. That's not necessary 
 
 <img width="1746" height="1694" alt="PrettyFeedScreenshot" src="https://github.com/user-attachments/assets/e6cf0796-0033-4e33-affa-b1ebd3186475" />
 
-Note: the timestamp formatting will vary based on what is used in your feed.xml.
+### Caveats:
+- Colors shown here are the defaults set by the variables
+- Timestamp formatting will vary based on what is used in your feed.xml
+- Your feed title will be used, not "Blog | Ben Millett"
