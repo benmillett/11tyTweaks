@@ -1,8 +1,10 @@
 # Using pretty-atom-feed.js
 
-This is my version of the [pretty-atom-feed.js](https://github.com/11ty/eleventy-base-blog/blob/100bde185fdcf717396931eff66e5a27fe07c8d6/content/feed/pretty-atom-feed.js) used in the @11ty/eleventy-base-blog.
+<img width="873" height="847" alt="PrettyFeedScreenshot" src="https://github.com/user-attachments/assets/e6cf0796-0033-4e33-affa-b1ebd3186475" />
 
-It adds an RSS icon and formats the `help` section and recent posts differently.
+This is my version of [pretty-atom-feed.js](https://github.com/11ty/eleventy-base-blog/blob/100bde185fdcf717396931eff66e5a27fe07c8d6/content/feed/pretty-atom-feed.js) used in the @11ty/eleventy-base-blog.
+
+It adds an RSS icon, rewords the `help` section, and formats the recent posts differently.
 
 ## Implementation
 
@@ -30,12 +32,8 @@ It adds an RSS icon and formats the `help` section and recent posts differently.
 
 4. Update the CSS variables to your preferred colors.
 
-## Screenshot
-
-<img width="1746" height="1694" alt="PrettyFeedScreenshot" src="https://github.com/user-attachments/assets/e6cf0796-0033-4e33-affa-b1ebd3186475" />
-
-### Screenshot caveats:
-- Colors shown here are the defaults set by the variables
+## Screenshot caveats:
+- Colors shown are the defaults set by the variables
 - Timestamp formatting will vary based on what is used in your feed.xml
 - Your feed title will be used, not "Blog | Ben Millett"
 
