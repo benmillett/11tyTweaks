@@ -22,7 +22,7 @@ Note: I use a customized `atom.njk` to create my RSS feed. That's not necessary 
 			type: "atom", // or "rss", "json"
 			outputPath: "/feed/feed.xml",
 			script: "pretty-atom-feed.js",
-		```
+	```
 
 4. Update the CSS variables to your preferred colors.
 
