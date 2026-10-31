@@ -6,6 +6,8 @@ It adds an RSS icon and formats the `help` section and recent posts differently.
 
 ## Implementation
 
+**You only need `pretty-atom-feed.js` from this repo if you've already added the 11ty RSS plugin**
+
 1. Put the `pretty-atom-feed.js` in the same folder that will house your `feed.xml`. (You may be replacing an existing file depending on your starting point.)
 
 2. Make sure to passthrough the file
