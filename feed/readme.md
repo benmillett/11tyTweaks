@@ -30,7 +30,18 @@ It adds an RSS icon and formats the `help` section and recent posts differently.
 
 4. Update the CSS variables to your preferred colors.
 
-### Note
+## Screenshot
+
+<img width="1746" height="1694" alt="PrettyFeedScreenshot" src="https://github.com/user-attachments/assets/e6cf0796-0033-4e33-affa-b1ebd3186475" />
+
+### Screenshot caveats:
+- Colors shown here are the defaults set by the variables
+- Timestamp formatting will vary based on what is used in your feed.xml
+- Your feed title will be used, not "Blog | Ben Millett"
+
+---
+
+## Note
 In my own implementation, I use a customized `atom.njk` to create the feed xml, so my set-up looks like this:
 - I just add an import and basic plugin call to `eleventy.config.js`. (I use `pluginRSS` instead of `feedPlugin` in the Eleventy Base example.)
 	```
@@ -49,16 +60,3 @@ In my own implementation, I use a customized `atom.njk` to create the feed xml, 
 	script: "pretty-atom-feed.js",
 	…
 	```
-
-
-
----
-
-## Screenshot
-
-<img width="1746" height="1694" alt="PrettyFeedScreenshot" src="https://github.com/user-attachments/assets/e6cf0796-0033-4e33-affa-b1ebd3186475" />
-
-### Caveats:
-- Colors shown here are the defaults set by the variables
-- Timestamp formatting will vary based on what is used in your feed.xml
-- Your feed title will be used, not "Blog | Ben Millett"
