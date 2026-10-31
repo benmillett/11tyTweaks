@@ -21,3 +21,5 @@ My blog repo is private, so this is a public-facing collection of the tweaks I'v
 
 - Additional shortcodes, etc., are included in `eleventy.config.js`
 - An alternate `pretty-atom-feed.js` is included in /feed folder
+  - <img width="360" height="234" alt="image" src="https://github.com/user-attachments/assets/d7e587dd-06cc-457a-8d8f-397dd348f011" />
+
