@@ -2,7 +2,7 @@
 
 This is my version of [pretty-atom-feed.js](https://github.com/11ty/eleventy-base-blog/blob/100bde185fdcf717396931eff66e5a27fe07c8d6/content/feed/pretty-atom-feed.js) used in the @11ty/eleventy-base-blog. It adds an RSS icon, rewords the `help` section, and formats the recent posts as `h3`.
 
-<img width="873" height="847" alt="PrettyFeedScreenshot" src="https://github.com/user-attachments/assets/e6cf0796-0033-4e33-affa-b1ebd3186475" />
+<img width="873" height="847" alt="PrettyFeedScreenshot" src="https://github.com/user-attachments/assets/e6cf0796-0033-4e33-affa-b1ebd3186475" style="box-shadow: color(srgb 0.465335 0.465335 0.465335 / 0.5) 0px 1.713182px 6.79834px 0px;" />
 
 - Colors shown are the defaults set by the variables
 - Timestamp formatting will vary based on what is used in your feed.xml
