@@ -1,4 +1,4 @@
-# My collection of 11ty tweaks
+# A collection of 11ty tweaks
 
 My blog repo is private, so this is a public-facing collection of the tweaks I've added to my 11ty site.
 
@@ -16,10 +16,15 @@ My blog repo is private, so this is a public-facing collection of the tweaks I'v
 - `npm install —save-dev pagefind` — [eleventyConfig install instructions](https://slecache.com/posts/adding-pagefind-search-to-a-static-eleventy-site/)
 - `npm install lightningcss --save-dev` – [eleventyConfig install instructions](https://www.11ty.dev/docs/quicktips/inline-css/)
 - `npm install @11ty/eleventy-plugin-syntaxhighlight` — [eleventyConfig install instructions](https://www.11ty.dev/docs/plugins/syntaxhighlight/)
+- `npm install photoswipe` — implementation hand-rolled in eleventy.config.js
 
 ## Tweaks
 
 - Additional shortcodes, etc., are included in `eleventy.config.js`
+  - Non-plugin implementation of `lite-youtube` for the web, with an atom feed fix
+  - PhotoSwipe and another gallery
+  - coverImage and excerpt/description
+  - widont
 - An alternate `pretty-atom-feed.js` is included in /feed folder
   - <img width="360" height="234" alt="image" src="https://github.com/user-attachments/assets/d7e587dd-06cc-457a-8d8f-397dd348f011" />
 
