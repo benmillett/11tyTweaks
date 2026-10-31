@@ -1,0 +1,32 @@
+---
+permalink: /feed/atom.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+{% if stylesheet %}<?xml-stylesheet href="{{stylesheet}}" type="text/xsl"?>{% endif %}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}" xml:lang="{{ metadata.language }}">
+{% if script %}<script src="{{script}}" xmlns="http://www.w3.org/1999/xhtml"></script>{% endif %}
+ 	<title>{{ metadata.title }}</title>
+	<subtitle>{{ metadata.subtitle }}</subtitle>
+	<link rel="self" type="application/atom+xml" href="{{ permalink | absoluteUrl(metadata.url) }}" />
+	<link href="{{ metadata.url }}" />
+	<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339}}</updated>
+	<id>{{ metadata.url }}</id>
+	<author>
+		<name>{{ metadata.author.name }}</name>
+		<email>{{ metadata.author.email }}</email>
+	</author>
+	{%- for post in collections.post | reverse | headQuantity(5) %}
+    {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}" />
+    <published>{{ post.date | dateToRfc3339 }}</published>
+    <updated>{{ post.updated or post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content xml:lang="{{ metadata.language }}" type="html">{{ post.content | renderTransforms(post.data.page, metadata.base) | replaceWebComponents }}
+    {% set comments %}{% include "../_includes/rsscomments.njk" %}{% endset %}
+    {{ comments | escape }}
+    </content>
+  </entry>
+	{%- endfor %}
+</feed>
