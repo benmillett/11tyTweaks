@@ -18,11 +18,12 @@ It adds an RSS icon and formats the `help` section and recent posts differently.
 3. Add the `script` line to the `export` section of your `eleventy.config.js`. Example:
 
 	```
+		…
 		eleventyConfig.addPlugin(feedPlugin, {
 			type: "atom", // or "rss", "json"
 			outputPath: "/feed/feed.xml",
 			script: "pretty-atom-feed.js",
-			…
+		…
 	```
 
 4. Update the CSS variables to your preferred colors.
